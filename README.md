@@ -1,3 +1,4 @@
 # MsPortfolio
 Microsoft Portfolio and Practice
-## Check rev 1
+## rev 1
+Created html portfolio with support of Gemini
