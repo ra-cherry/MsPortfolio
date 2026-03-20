@@ -50,18 +50,24 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4);
         }
+
+        .cert-card:hover {
+            border-color: rgba(96, 165, 250, 0.5);
+            background: rgba(30, 41, 59, 0.8);
+        }
     </style>
 </head>
 <body class="overflow-x-hidden">
     <div class="neuron-bg"></div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass-card px-6 py-4 flex justify-between items-center">
-        <div class="text-xl font-black tracking-tighter gradient-text">NEURO-AI LAB</div>
+    <nav class="fixed top-0 w-full z-50 glass-card px-6 py-4 flex justify-between items-center transition-all duration-300">
+        <div class="text-xl font-black tracking-tighter gradient-text cursor-pointer" onclick="window.scrollTo(0,0)">NEURO-AI LAB</div>
         <div class="hidden md:flex space-x-8 text-sm font-medium">
             <a href="#home" class="hover:text-blue-400 transition">Home</a>
             <a href="#about" class="hover:text-blue-400 transition">About</a>
             <a href="#skills" class="hover:text-blue-400 transition">Expertise</a>
+            <a href="#certificates" class="hover:text-blue-400 transition">Certificates</a>
             <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
             <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
         </div>
@@ -95,7 +101,7 @@
         </div>
     </section>
 
-    <!-- Stats/Specialties Section -->
+    <!-- Stats Section -->
     <section id="about" class="py-24 px-6 bg-slate-900/50">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
             <div class="p-8 glass-card rounded-3xl text-center" data-aos="fade-up" data-aos-delay="100">
@@ -117,23 +123,23 @@
                     <i data-lucide="cloud"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-2">Azure Cloud</h3>
-                <p class="text-slate-400 text-sm">클라우드 기반 아키텍처 및 대용량 인프라 관리</p>
+                <p class="text-slate-400 text-sm">클라우드 기반 아키텍처 및 인프라 관리</p>
             </div>
             <div class="p-8 glass-card rounded-3xl text-center" data-aos="fade-up" data-aos-delay="400">
                 <div class="mb-4 inline-block p-3 bg-pink-500/20 rounded-2xl text-pink-400">
                     <i data-lucide="line-chart"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-2">데이터 & ML</h3>
-                <p class="text-slate-400 text-sm">심층 데이터 분석 및 고성능 AI 모델 학습</p>
+                <p class="text-slate-400 text-sm">심층 데이터 분석 및 AI 모델 학습</p>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Expertise Section -->
     <section id="skills" class="py-32 px-6">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-black mb-4">Core Expertise</h2>
+                <h2 class="text-4xl font-black mb-4 uppercase tracking-tight">Core Expertise</h2>
                 <div class="h-1 w-20 bg-blue-500 mx-auto"></div>
             </div>
 
@@ -170,56 +176,103 @@
         </div>
     </section>
 
+    <!-- NEW: Certificates Section -->
+    <section id="certificates" class="py-32 px-6 bg-slate-900/30 border-y border-slate-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-black mb-4 uppercase tracking-tight">Certificates</h2>
+                <p class="text-slate-400">전문성을 입증하는 자격 및 수료 사항입니다.</p>
+                <div class="h-1 w-20 bg-blue-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Cert 1 -->
+                <div class="cert-card glass-card p-6 rounded-2xl flex items-start space-x-4 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-blue-500/20 p-3 rounded-xl text-blue-400">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">Advanced Placement Certified</h4>
+                        <p class="text-slate-500 text-sm mb-2">Collegeboard | 2020-2023</p>
+                        <span class="text-xs text-blue-400 font-mono">Credential ID: AZ-305</span>
+                    </div>
+                </div>
+                <!-- Cert 2 -->
+                <div class="cert-card glass-card p-6 rounded-2xl flex items-start space-x-4 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-indigo-500/20 p-3 rounded-xl text-indigo-400">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">Azure Data Scientist Associate</h4>
+                        <p class="text-slate-500 text-sm mb-2">Microsoft | 2023</p>
+                        <span class="text-xs text-indigo-400 font-mono">Credential ID: DP-100</span>
+                    </div>
+                </div>
+                <!-- Cert 3 -->
+                <div class="cert-card glass-card p-6 rounded-2xl flex items-start space-x-4 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-pink-500/20 p-3 rounded-xl text-pink-400">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">Deep Learning Specialization</h4>
+                        <p class="text-slate-500 text-sm mb-2">Coursera (DeepLearning.AI) | 2022</p>
+                        <span class="text-xs text-pink-400 font-mono">Issued by Andrew Ng</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
-    <section id="projects" class="py-32 px-6 bg-slate-900/30">
+    <section id="projects" class="py-32 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16" data-aos="fade-up">
                 <div>
-                    <h2 class="text-4xl font-black mb-4">Featured Projects</h2>
+                    <h2 class="text-4xl font-black mb-4 uppercase tracking-tight">Featured Projects</h2>
                     <p class="text-slate-400">최신 기술을 활용한 연구 및 개발 성과입니다.</p>
                 </div>
                 <div class="mt-6 md:mt-0">
                     <a href="#" class="text-blue-400 font-bold hover:underline flex items-center">
-                        모든 프로젝트 보기 <i data-lucide="arrow-up-right" class="ml-1 w-4 h-4"></i>
+                        전체 포트폴리오 <i data-lucide="arrow-up-right" class="ml-1 w-4 h-4"></i>
                     </a>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <!-- Project 1 -->
-                <div class="group relative overflow-hidden rounded-3xl glass-card" data-aos="zoom-in-up">
+                <div class="group relative overflow-hidden rounded-3xl glass-card border border-white/5" data-aos="zoom-in-up">
                     <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=1000" alt="Brain Connectivity Analysis" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-60">
+                        <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=1000" alt="Brain Connectivity Analysis" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-50">
                     </div>
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="text-2xl font-bold">실시간 뇌파 신호 분석 시스템</h3>
                             <span class="bg-blue-500/20 text-blue-400 text-xs px-3 py-1 rounded-full border border-blue-500/30">ML/Data</span>
                         </div>
-                        <p class="text-slate-400 mb-6">fMRI 및 EEG 데이터를 실시간으로 시각화하고 딥러닝 모델을 통해 인지 상태를 분류하는 대시보드 시스템 구축.</p>
+                        <p class="text-slate-400 mb-6 leading-relaxed">fMRI 및 EEG 데이터를 실시간으로 시각화하고 딥러닝 모델을 통해 인지 상태를 분류하는 대시보드 시스템 구축.</p>
                         <div class="flex space-x-4">
-                            <span class="text-xs font-mono text-slate-500">#Python</span>
-                            <span class="text-xs font-mono text-slate-500">#Azure_Stream_Analytics</span>
-                            <span class="text-xs font-mono text-slate-500">#PyTorch</span>
+                            <span class="text-xs font-mono text-slate-500 uppercase">#Python</span>
+                            <span class="text-xs font-mono text-slate-500 uppercase">#Azure_Stream</span>
+                            <span class="text-xs font-mono text-slate-500 uppercase">#PyTorch</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="group relative overflow-hidden rounded-3xl glass-card" data-aos="zoom-in-up" data-aos-delay="200">
+                <div class="group relative overflow-hidden rounded-3xl glass-card border border-white/5" data-aos="zoom-in-up" data-aos-delay="200">
                     <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=1000" alt="Cloud Infrastructure" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-60">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=1000" alt="Cloud Infrastructure" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-50">
                     </div>
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-2xl font-bold">Azure 기반 AI 파이프라인 자동화</h3>
+                            <h3 class="text-2xl font-bold">Azure 기반 AI MLOps 파이프라인</h3>
                             <span class="bg-indigo-500/20 text-indigo-400 text-xs px-3 py-1 rounded-full border border-indigo-500/30">Cloud/DevOps</span>
                         </div>
-                        <p class="text-slate-400 mb-6">전사적 데이터 분석을 위한 Azure Data Lake와 MLOps 환경 구축. 데이터 수집부터 배포까지의 전 과정 자동화.</p>
+                        <p class="text-slate-400 mb-6 leading-relaxed">데이터 수집부터 모델 학습, 배포까지의 전 과정을 자동화하는 클라우드 기반 인프라 설계 및 구축.</p>
                         <div class="flex space-x-4">
-                            <span class="text-xs font-mono text-slate-500">#Azure_ML</span>
-                            <span class="text-xs font-mono text-slate-500">#Docker</span>
-                            <span class="text-xs font-mono text-slate-500">#FastAPI</span>
+                            <span class="text-xs font-mono text-slate-500 uppercase">#Azure_ML</span>
+                            <span class="text-xs font-mono text-slate-500 uppercase">#Docker</span>
+                            <span class="text-xs font-mono text-slate-500 uppercase">#Terraform</span>
                         </div>
                     </div>
                 </div>
@@ -229,22 +282,22 @@
 
     <!-- Contact Section -->
     <section id="contact" class="py-32 px-6">
-        <div class="max-w-4xl mx-auto glass-card rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto glass-card rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden border border-white/10" data-aos="fade-up">
             <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[100px]"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-6">함께 혁신을 만들어갈까요?</h2>
-                <p class="text-slate-400 text-lg mb-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-6 uppercase tracking-tight">Let's Connect</h2>
+                <p class="text-slate-400 text-lg mb-10 leading-relaxed">
                     뇌과학 기술과 AI의 융합, 혹은 클라우드 기반의 대규모 서비스 구축에 관심이 있으시다면 언제든 연락주세요.
                 </p>
-                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
-                    <a href="mailto:your-email@example.com" class="flex items-center space-x-3 text-xl font-bold hover:text-blue-400 transition">
-                        <i data-lucide="mail"></i>
-                        <span>your-email@example.com</span>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-8">
+                    <a href="mailto:suhyunbyun1215@gmail.com" class="flex items-center space-x-3 text-xl font-bold hover:text-blue-400 transition group">
+                        <i data-lucide="mail" class="group-hover:scale-110 transition"></i>
+                        <span>suhyunbyun1215@gmail.com</span>
                     </a>
-                    <div class="hidden md:block w-1 h-6 bg-slate-700"></div>
+                    <div class="hidden md:block w-px h-8 bg-slate-700"></div>
                     <div class="flex space-x-6">
-                        <a href="#" class="p-3 glass-card rounded-full hover:bg-blue-500/20 transition"><i data-lucide="github"></i></a>
-                        <a href="#" class="p-3 glass-card rounded-full hover:bg-blue-500/20 transition"><i data-lucide="linkedin"></i></a>
+                        <a href="#" class="p-3 glass-card rounded-full hover:bg-blue-500/20 transition-all hover:-translate-y-1"><i data-lucide="github"></i></a>
+                        <a href="#" class="p-3 glass-card rounded-full hover:bg-blue-500/20 transition-all hover:-translate-y-1"><i data-lucide="linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -262,26 +315,27 @@
 
         // Initialize AOS
         AOS.init({
-            duration: 1000,
+            duration: 800,
             once: true,
-            easing: 'ease-out-quad'
+            easing: 'ease-out-cubic'
         });
 
         // Mobile Menu Logic
         const menuBtn = document.getElementById('menu-btn');
         menuBtn.addEventListener('click', () => {
-            // Simple alert as per instructions (but implemented via custom UI log logic in real scenarios)
-            // Here we just toggle visibility or log if needed.
-            console.log('Menu Toggled');
+            console.log('Mobile menu requested');
+            // 실전 서비스 시에는 슬라이드 메뉴나 모달을 구현합니다.
         });
 
-        // Header Background on Scroll
+        // Sticky Nav Styling
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.backgroundColor = 'rgba(2, 6, 23, 0.8)';
+            if (window.scrollY > 100) {
+                nav.classList.add('py-2', 'bg-slate-950/80');
+                nav.classList.remove('py-4', 'bg-transparent');
             } else {
-                nav.style.backgroundColor = 'rgba(30, 41, 59, 0.5)';
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2', 'bg-slate-950/80');
             }
         });
     </script>
